@@ -1,0 +1,20 @@
+.form-group {
+    margin-bottom: 15px;
+    
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 2px solid black;
+  }
+  
+  .btn {
+    margin-top: 10px;
+  }
+  form{
+    border: 2px solid black;
+    padding: 10px;
+    
+  }

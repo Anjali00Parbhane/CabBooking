@@ -1,0 +1,152 @@
+.search-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+  }
+  .search-box {
+    display: flex;
+    align-items: center;
+  }
+  .search-input {
+    flex: 1;
+  }
+  .search-button {
+    margin-left: 10px;
+  }
+  /* Container styling */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Card styling */
+  .cab-card {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    overflow: hidden;
+  }
+  
+  .cab-card-header {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .cab-card-body {
+    padding: 15px;
+  }
+  
+  .cab-card-body p {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .cab-card-body strong {
+    color: #333;
+  }
+  
+  /* Alert styling */
+  .alert-warning {
+    border: 1px solid #ffeeba;
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .alert-warning::before {
+    content: '⚠️ ';
+    font-size: 18px;
+    vertical-align: middle;
+  }
+  /* Container styling */
+.container {
+    max-width: 900px; /* Set a maximum width for large screens */
+    margin: 0 auto;   /* Center the container horizontally */
+    padding: 20px;    /* Add padding for spacing */
+  }
+  
+  /* Full-width centered div */
+  .full-width-center {
+    width: 100%; /* Occupy 100% width of the parent container */
+    margin: 0 auto; /* Center the div horizontally */
+  }
+  
+  /* Card styling */
+  .cab-card {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    overflow: hidden;
+  }
+  
+  .cab-card-header {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .cab-card-body {
+    padding: 15px;
+  }
+  
+  .cab-card-body p {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .cab-card-body strong {
+    color: #333;
+  }
+  
+  /* Alert styling */
+  .alert-warning {
+    border: 1px solid #ffeeba;
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .alert-warning::before {
+    content: '⚠️ ';
+    font-size: 18px;
+    vertical-align: middle;
+  }
+  .btn{
+      margin: 4px;
+  }
+  .cab-card {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .cab-card-header {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 1.25rem;
+  }
+  .cab-card-body {
+    padding: 15px;
+  }
+  .cab-detail {
+    margin-bottom: 10px;
+  }

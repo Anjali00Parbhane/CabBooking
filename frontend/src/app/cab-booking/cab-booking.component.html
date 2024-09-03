@@ -1,0 +1,43 @@
+<form (ngSubmit)="onSubmit()" #cabForm="ngForm">
+
+    <div class="form-group">
+        <label for="Cab No">Cab No:</label>
+        <input
+          type="number"
+          id="Cab No"
+          name="Cab No"
+          [(ngModel)]="CabNo"
+          required
+          class="form-control"
+        />
+      </div>
+    
+    <div class="form-group">
+      <label for="seatsBooked">Number of Seats to Booked:</label>
+      <input
+        type="number"
+        id="seatsToBeBooked"
+        name="seatsToBeBooked"
+        [(ngModel)]="seatsToBeBooked"
+        required
+        class="form-control"
+      />
+    </div>
+  
+   
+    <div class="form-group">
+        <label for="Employee Id">Employee Id:</label>
+        <input
+          type="number"
+          id="Employee Id"
+          name="Employee Id"
+          [(ngModel)]="EmployeeId"
+          required
+          class="form-control"
+        />
+      </div>
+    
+  
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  

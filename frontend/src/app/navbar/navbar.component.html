@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar with Dropdown</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom styles for the navbar */
+    .navbar-dark .navbar-nav .nav-link {
+      color: #fff;
+    }
+    .navbar-dark .navbar-nav .nav-link:hover {
+      color: #ff6600;
+    }
+    .dropdown-menu {
+      background-color: #333;
+      border: none;
+    }
+    .dropdown-menu .dropdown-item {
+      color: #fff;
+    }
+    .dropdown-menu .dropdown-item:hover {
+      background-color: #ff6600;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Cabz</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/cabs" routerLinkActive="active">Get All Cabs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/addEmployee" routerLinkActive="active">Add Employee</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/addCab" routerLinkActive="active">Add Cab</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/bookCab" routerLinkActive="active">Book Cab</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/bookings" routerLinkActive="active">Get Bookings</a>
+        </li>
+        <!-- Dropdown Menu -->
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/getCab" routerLinkActive="active">Get Cab</a>
+      
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <router-outlet></router-outlet>
+</body>
+</html>

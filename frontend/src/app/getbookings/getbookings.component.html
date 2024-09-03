@@ -1,0 +1,16 @@
+<!-- app.component.html -->
+<div class="booking-list">
+    <h2>Booking Details</h2>
+    <ul>
+      <li *ngFor="let booking of bookings">
+        <div class="booking-item">
+          <p><strong>Booking ID:</strong> {{ booking.bookingId }}</p>
+          <p><strong>Booked By:</strong> {{ booking.bookedBy }}</p>
+          <p><strong>Cab Number:</strong> {{ booking.cabNo }}</p>
+          <p><strong>Cab Time:</strong> {{ booking.cabTime }} HRS</p>
+          <p><strong>Number of Seats Booked:</strong> {{ booking.numberOfSeatsBooked }}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  

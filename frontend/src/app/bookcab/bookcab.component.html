@@ -1,0 +1,41 @@
+<form (ngSubmit)="onSubmit()" #cabForm="ngForm">
+    <div class="form-group">
+      <label for="seatsBooked">Seats Booked:</label>
+      <input
+        type="number"
+        id="seatsBooked"
+        name="seatsBooked"
+        [(ngModel)]="seatsBooked"
+        required
+        class="form-control"
+      />
+    </div>
+  
+    <div class="form-group">
+      <label for="nextAvailableAt">Next Available At (hours):</label>
+      <input
+        type="number"
+        id="nextAvailableAt"
+        name="nextAvailableAt"
+        [(ngModel)]="nextAvailableAt"
+        required
+        class="form-control"
+      />
+    </div>
+  
+    <div class="form-group">
+      <label for="route">Route:</label>
+      <input
+        type="text"
+        id="route"
+        name="route"
+        [(ngModel)]="route"
+        required
+        class="form-control"
+      />
+    </div>
+    
+  
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  

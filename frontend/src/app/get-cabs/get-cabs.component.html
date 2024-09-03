@@ -1,0 +1,166 @@
+
+<!--
+
+<div class="search-container">
+    <h2 class="text-center mb-4">Search for Cabs</h2>
+    <div class="search-box">
+      <input type="number" class="form-control search-input" placeholder="Enter cab id" name="search" [(ngModel)]="search" >
+      <button class="btn btn-primary search-button" (click)="getCabById(search)" >Search</button>
+    </div>
+    
+     
+  </div>
+  
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  
+  
+  <div class="container mt-5">
+    <div class="row">
+      
+      <ng-container *ngIf="cab; else noData">
+        <div class="col-md-4">
+          <div class="cab-card">
+            <div class="cab-card-header">
+              Cab No: {{ cab.cabNo }}
+            </div>
+            <div class="cab-card-body">
+              <p><strong>Seats Booked:</strong> {{ cab.seatsBooked }}</p>
+              <p><strong>Next Available At:</strong> {{ cab.nextAvailableAt }} hours</p>
+              <p><strong>Route:</strong> {{ cab.route.split(',').join(' → ') }}</p>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+      
+      <ng-template #noData>
+        <div class="col-md-12">
+          <div class="alert alert-warning" role="alert">
+            No cab data available.
+          </div>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+
+
+  -->
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angular Dropdown</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1>Select an option for getting cab details</h1>
+    
+    <div class="form-group">
+      <label for="dropdownMenu">Select an Option:</label>
+      <select id="dropdownMenu" class="form-control" (change)="onSelectionChange($event)">
+        <option *ngFor="let option of dropdownOptions" [value]="option">
+          {{ option }}
+        </option>
+      </select>
+    </div>
+
+    
+    <div *ngIf="selectedOption === 'By CabNo'">
+        <label for="cabNoInput">Enter Cab Number:</label>
+        <input id="cabNoInput" type="number" class="form-control" [(ngModel)]="inputValue" placeholder="Enter Cab Number">
+        <button class="btn btn-primary" (click)="handleSearch()">Search</button>
+    </div>
+  
+      <div *ngIf="selectedOption === 'By Place'">
+        <label for="placeInput">Enter Place:</label>
+        <input id="placeInput" type="text" class="form-control" [(ngModel)]="inputValue" placeholder="Enter Place">
+        <button class="btn btn-primary" (click)="handleSearch()">Search</button>
+    </div>
+  
+      <div *ngIf="selectedOption === 'By Availability'">
+        <label for="availabilityInput">Enter Availability:</label>
+        <input id="availabilityInput" type="number" class="form-control" [(ngModel)]="inputValue" placeholder="Enter Availability">
+        <button class="btn btn-primary" (click)="handleSearch()">Search</button>
+    </div>
+
+
+
+
+  </div>
+
+  <div class="container mt-4" *ngIf="selectedOption != 'By CabNo'  && cab && cab.length > 0">
+  
+    <div class="row">
+      <!-- Loop through the cabs array -->
+      <div class="col-md-4" *ngFor="let cab of cab">
+        <div class="card cab-card">
+          <div class="card-header cab-card-header">
+            Cab No: {{ cab.cabNo }}
+          </div>
+          <div class="card-body cab-card-body">
+            <div class="cab-detail">
+              <strong>Seats Booked:</strong> {{ cab.seatsBooked }}
+            </div>
+            <div class="cab-detail">
+              <strong>Next Available At:</strong> {{ cab.nextAvailableAt }} hours
+            </div>
+            <div class="cab-detail">
+              <strong>Route:</strong> {{ cab.route }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5" *ngIf="selectedOption === 'By CabNo' && cab && cab.cabNo>0">
+    <div class="row">
+      
+      <ng-container *ngIf="selectedOption === 'By CabNo'; else noData">
+        <div class="col-md-4">
+          <div class="cab-card">
+            <div class="cab-card-header">
+              Cab No: {{ cab.cabNo }}
+            </div>
+            <div class="cab-card-body">
+              <p><strong>Seats Booked:</strong> {{ cab.seatsBooked }}</p>
+              <p><strong>Next Available At:</strong> {{ cab.nextAvailableAt }} hours</p>
+              <p><strong>Route:</strong> {{ cab.route.split(',').join(' → ') }}</p>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+      
+      <ng-template #noData>
+        <div class="col-md-12">
+          <div class="alert alert-warning" role="alert">
+            No cab data available.
+          </div>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+
+  <ng-template *ngIf="(selectedOption != 'By CabNo' && cab && cab.length==0) || (selectedOption === 'By CabNo' && (!cab || cab.cabNo==0))  " >
+    <div class="col-md-12">
+      <div class="alert alert-warning" role="alert">
+        No cab data available.
+      </div>
+    </div>
+  </ng-template>
+
+  
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+

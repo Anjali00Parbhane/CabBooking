@@ -1,0 +1,40 @@
+/* styles.css */
+.booking-list {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    background-color: #f9f9f9;
+  }
+  
+  .booking-list h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .booking-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .booking-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    border: 2px solid black;
+    padding: 5px;
+    margin: 5px;
+  }
+  
+  
+  
+  .booking-item p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .booking-item strong {
+    color: #000;
+  }
+  

@@ -1,0 +1,16 @@
+<div class="container">
+    <h1 class="header">Available Cabs</h1>
+    <div class="cab-list">
+      <div *ngFor="let cab of cabList" class="cab-item">
+        <h2 class="cab-header">Cab No: {{ cab.cabNo }}</h2>
+        <p><strong>Seats Booked:</strong> {{ cab.seatsBooked }}</p>
+        <p><strong>Next Available At:</strong> {{ cab.nextAvailableAt }} hours</p>
+        <p><strong>Route:</strong> {{ cab.route.split(',').join(' → ') }}</p>
+        <button (click)="deleteCab(cab.cabNo)" class="btn btn-danger">Delete</button>
+        <button (click)="updateCab(cab.cabNo)" class="btn btn-warning">Update</button>
+
+    </div>
+    
+    </div>
+  </div>
+  
